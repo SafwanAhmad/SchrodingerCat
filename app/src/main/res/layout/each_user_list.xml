@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/lib/com.mikhaellopez.circularimageviewsample"
+                android:id="@+id/profile_image"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                app:civ_border="true"
+                app:civ_border_color="#808080"
+                app:civ_border_width="2dp"
+                android:layout_marginLeft="8dp"/>
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="User Name"
+                android:paddingLeft="16dp"/>
+
+        </LinearLayout>
+
+        <!-- This is for items associated to a person -->
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/child_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginRight="8dp"
+            app:spanCount="2"
+            app:layoutManager="android.support.v7.widget.GridLayoutManager"/>
+
+    </LinearLayout>
+
+</FrameLayout>
