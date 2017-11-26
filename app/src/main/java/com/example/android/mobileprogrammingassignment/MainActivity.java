@@ -4,7 +4,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.LinearSnapHelper;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SnapHelper;
 import android.util.Log;
 
 import com.example.android.mobileprogrammingassignment.api.UserListApi;
@@ -54,8 +56,9 @@ public class MainActivity extends AppCompatActivity implements PaginationAdapter
         parentAdapter = new PaginationAdapter(this);
         rv.setAdapter(parentAdapter);
 
-        // TODO Try to set predictive animation for gridlayout manager to false
-
+        // Set snapping behaviour to our main recycler view
+        SnapHelper helper = new LinearSnapHelper();
+        helper.attachToRecyclerView(rv);
 
 
         // Add scroll listener to recycler view
