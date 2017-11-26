@@ -54,6 +54,10 @@ public class MainActivity extends AppCompatActivity implements PaginationAdapter
         parentAdapter = new PaginationAdapter(this);
         rv.setAdapter(parentAdapter);
 
+        // TODO Try to set predictive animation for gridlayout manager to false
+
+
+
         // Add scroll listener to recycler view
         rv.addOnScrollListener(new PaginationScrollListener((LinearLayoutManager)rv.getLayoutManager()) {
             @Override

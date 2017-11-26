@@ -30,7 +30,10 @@
                 android:layout_height="match_parent"
                 android:gravity="center_vertical"
                 android:text="User Name"
-                android:paddingLeft="16dp"/>
+                android:textSize="22sp"
+                android:textStyle="normal"
+                android:fontFamily="sans-serif"
+                android:paddingLeft="22dp"/>
 
         </LinearLayout>
 
@@ -42,7 +45,7 @@
             android:orientation="vertical"
             android:layout_marginRight="8dp"
             app:spanCount="2"
-            app:layoutManager="android.support.v7.widget.GridLayoutManager"/>
+            app:layoutManager="android.support.v7.widget.GridLayoutManager" />
 
     </LinearLayout>
 

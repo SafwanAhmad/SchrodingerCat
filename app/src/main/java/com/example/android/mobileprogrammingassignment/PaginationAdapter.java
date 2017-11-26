@@ -125,7 +125,7 @@ public class PaginationAdapter extends RecyclerView.Adapter<PaginationAdapter.He
 
     public void add(User r) {
         users.add(r);
-        notifyItemInserted(users.size() - 1);
+        notifyDataSetChanged();
     }
 
     public void addAll(List<User> allUsers) {
